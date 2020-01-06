@@ -1,0 +1,36 @@
+$date
+	Mon Apr 17 17:38:20 2017
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_inmem $end
+$var wire 16 ! iout [15:0] $end
+$var reg 9 " iadd [8:0] $end
+$scope module uut $end
+$var wire 9 # iadd [8:0] $end
+$var reg 16 $ iout [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b100010011101100 $
+b100 #
+b100 "
+b100010011101100 !
+$end
+#50
+b101011100000000 $
+b101011100000000 !
+b101 "
+b101 #
+#100
+b1010010011001000 $
+b1010010011001000 !
+b1000 "
+b1000 #
+#150

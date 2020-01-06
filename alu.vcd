@@ -1,0 +1,73 @@
+$date
+	Mon Apr 17 14:30:35 2017
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_alu $end
+$var wire 16 ! y [15:0] $end
+$var wire 1 " z $end
+$var reg 16 # a [15:0] $end
+$var reg 3 $ aluc [2:0] $end
+$var reg 16 % b [15:0] $end
+$scope module uut $end
+$var wire 16 & a [15:0] $end
+$var wire 3 ' aluc [2:0] $end
+$var wire 16 ( b [15:0] $end
+$var reg 16 ) y [15:0] $end
+$var reg 1 * z $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0*
+b10 )
+b10 (
+b100 '
+b1001 &
+b10 %
+b100 $
+b1001 #
+0"
+b10 !
+$end
+#50
+b1011 )
+b1011 !
+b0 $
+b0 '
+#100
+b111 )
+b111 !
+b1 $
+b1 '
+#150
+b1111111111111111 )
+b1111111111111111 !
+b10 $
+b10 '
+#200
+b1111111111110111 )
+b1111111111110111 !
+b11 $
+b11 '
+#250
+b10 )
+b10 !
+b100 $
+b100 '
+#300
+b101 $
+b101 '
+#350
+b100100 )
+b100100 !
+b110 $
+b110 '
+#400
+b111 $
+b111 '

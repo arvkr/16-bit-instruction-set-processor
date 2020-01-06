@@ -1,0 +1,487 @@
+$date
+	Mon Apr 17 19:26:30 2017
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module datapath $end
+$var wire 16 ! a [15:0] $end
+$var wire 2 " aluactrl [1:0] $end
+$var wire 2 # alubctrl [1:0] $end
+$var wire 3 $ aluctrl [2:0] $end
+$var wire 16 % b [15:0] $end
+$var wire 1 & clk $end
+$var wire 8 ' dadd [7:0] $end
+$var wire 2 ( datmem1ctrl [1:0] $end
+$var wire 2 ) datmem2ctrl [1:0] $end
+$var wire 16 * din [15:0] $end
+$var wire 16 + dout [15:0] $end
+$var wire 16 , in [15:0] $end
+$var wire 9 - jadd [8:0] $end
+$var wire 9 . pc_inmem [8:0] $end
+$var wire 2 / pcctrl [1:0] $end
+$var wire 9 0 pcin [8:0] $end
+$var wire 9 1 pcin1 [8:0] $end
+$var wire 16 2 ra [15:0] $end
+$var wire 2 3 ra1ctrl [1:0] $end
+$var wire 4 4 ra_ad [3:0] $end
+$var wire 16 5 rb [15:0] $end
+$var wire 1 6 rst $end
+$var wire 1 7 rwb $end
+$var wire 16 8 sout [15:0] $end
+$var wire 1 9 stack_en $end
+$var wire 1 : stack_rwb $end
+$var wire 4 ; w1 [3:0] $end
+$var wire 1 < wen $end
+$var wire 16 = wr_d [15:0] $end
+$var wire 2 > wrctrl [1:0] $end
+$var wire 16 ? y [15:0] $end
+$var wire 1 @ z $end
+$scope module pcmux $end
+$var wire 9 A d1 [8:0] $end
+$var wire 9 B d2 [8:0] $end
+$var wire 9 C d3 [8:0] $end
+$var wire 9 D d4 [8:0] $end
+$var wire 2 E s [1:0] $end
+$var reg 9 F dout [8:0] $end
+$upscope $end
+$scope module p $end
+$var wire 1 & clk $end
+$var wire 9 G iaddin [8:0] $end
+$var wire 1 6 rst $end
+$var reg 9 H iaddout [8:0] $end
+$upscope $end
+$scope module i $end
+$var wire 9 I iadd [8:0] $end
+$var reg 16 J iout [15:0] $end
+$upscope $end
+$scope module ramux $end
+$var wire 4 K d1 [3:0] $end
+$var wire 4 L d2 [3:0] $end
+$var wire 4 M d3 [3:0] $end
+$var wire 4 N d4 [3:0] $end
+$var wire 2 O s [1:0] $end
+$var reg 4 P dout [3:0] $end
+$upscope $end
+$scope module ra2mux $end
+$var wire 4 Q d1 [3:0] $end
+$var wire 4 R d2 [3:0] $end
+$var wire 4 S d3 [3:0] $end
+$var wire 4 T d4 [3:0] $end
+$var wire 2 U s [1:0] $end
+$var reg 4 V dout [3:0] $end
+$upscope $end
+$scope module wrmux $end
+$var wire 16 W d1 [15:0] $end
+$var wire 16 X d2 [15:0] $end
+$var wire 16 Y d3 [15:0] $end
+$var wire 16 Z d4 [15:0] $end
+$var wire 2 [ s [1:0] $end
+$var reg 16 \ dout [15:0] $end
+$upscope $end
+$scope module regfile $end
+$var wire 4 ] ra_adr [3:0] $end
+$var wire 4 ^ rb_adr [3:0] $end
+$var wire 4 _ rc_adr [3:0] $end
+$var wire 16 ` rc_data [15:0] $end
+$var wire 1 < wen $end
+$var reg 16 a ra_data [15:0] $end
+$var reg 16 b rb_data [15:0] $end
+$upscope $end
+$scope module aluamux $end
+$var wire 16 c d1 [15:0] $end
+$var wire 16 d d2 [15:0] $end
+$var wire 16 e d3 [15:0] $end
+$var wire 16 f d4 [15:0] $end
+$var wire 2 g s [1:0] $end
+$var reg 16 h dout [15:0] $end
+$upscope $end
+$scope module alubmux $end
+$var wire 16 i d1 [15:0] $end
+$var wire 16 j d2 [15:0] $end
+$var wire 16 k d3 [15:0] $end
+$var wire 16 l d4 [15:0] $end
+$var wire 2 m s [1:0] $end
+$var reg 16 n dout [15:0] $end
+$upscope $end
+$scope module main_alu $end
+$var wire 16 o a [15:0] $end
+$var wire 3 p aluc [2:0] $end
+$var wire 16 q b [15:0] $end
+$var reg 16 r y [15:0] $end
+$var reg 1 s z $end
+$upscope $end
+$scope module datmem1_mux $end
+$var wire 8 t d1 [7:0] $end
+$var wire 8 u d2 [7:0] $end
+$var wire 8 v d3 [7:0] $end
+$var wire 8 w d4 [7:0] $end
+$var wire 2 x s [1:0] $end
+$var reg 8 y dout [7:0] $end
+$upscope $end
+$scope module datmem2_mux $end
+$var wire 16 z d1 [15:0] $end
+$var wire 16 { d2 [15:0] $end
+$var wire 16 | d3 [15:0] $end
+$var wire 16 } d4 [15:0] $end
+$var wire 2 ~ s [1:0] $end
+$var reg 16 !" dout [15:0] $end
+$upscope $end
+$scope module main_datmem $end
+$var wire 8 "" dadd [7:0] $end
+$var wire 16 #" din [15:0] $end
+$var wire 1 7 rwb $end
+$var reg 16 $" dout [15:0] $end
+$upscope $end
+$scope module stack1 $end
+$var wire 16 %" din [15:0] $end
+$var wire 1 9 en $end
+$var wire 1 : rwb $end
+$var reg 16 &" dout [15:0] $end
+$upscope $end
+$scope module control1 $end
+$var wire 4 '" funct [3:0] $end
+$var wire 4 (" opcode [3:0] $end
+$var reg 2 )" alu_a [1:0] $end
+$var reg 2 *" alu_b [1:0] $end
+$var reg 3 +" aluc [2:0] $end
+$var reg 2 ," dm_add [1:0] $end
+$var reg 2 -" dm_data [1:0] $end
+$var reg 1 ." dm_wen $end
+$var reg 2 /" pc_src [1:0] $end
+$var reg 2 0" rf_a [1:0] $end
+$var reg 2 1" rf_data [1:0] $end
+$var reg 1 2" rf_wen $end
+$var reg 1 3" stack_en $end
+$var reg 1 4" stack_rwb $end
+$upscope $end
+$upscope $end
+$scope module globalvar $end
+$var reg 4 5" adr [3:0] $end
+$var reg 1 6" empty $end
+$var reg 1 7" full $end
+$upscope $end
+$scope module psw $end
+$var wire 1 8" clk $end
+$var wire 1 9" rst $end
+$var wire 4 :" swin [3:0] $end
+$var reg 4 ;" swout [3:0] $end
+$upscope $end
+$scope module tb_register_file $end
+$var wire 16 <" ra_data [15:0] $end
+$var wire 16 =" rb_data [15:0] $end
+$var reg 4 >" ra_adr [3:0] $end
+$var reg 4 ?" rb_adr [3:0] $end
+$var reg 4 @" rc_adr [3:0] $end
+$var reg 16 A" rc_data [15:0] $end
+$var reg 1 B" wen $end
+$scope module uut $end
+$var wire 4 C" ra_adr [3:0] $end
+$var wire 4 D" rb_adr [3:0] $end
+$var wire 4 E" rc_adr [3:0] $end
+$var wire 16 F" rc_data [15:0] $end
+$var wire 1 G" wen $end
+$var reg 16 H" ra_data [15:0] $end
+$var reg 16 I" rb_data [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1110010000110010 I"
+b111101111111 H"
+0G"
+b1111111111111111 F"
+b10 E"
+b1 D"
+b0 C"
+0B"
+b1111111111111111 A"
+b10 @"
+b1 ?"
+b0 >"
+b1110010000110010 ="
+b111101111111 <"
+bx ;"
+bz :"
+z9"
+z8"
+07"
+16"
+bx 5"
+x4"
+03"
+02"
+bx 1"
+bx 0"
+bx /"
+0."
+bx -"
+bx ,"
+bx +"
+bx *"
+bx )"
+bx ("
+bx '"
+bx &"
+b111101111111 %"
+b1100010101011 $"
+b0 #"
+b0 ""
+b0 !"
+bx ~
+b0 }
+b0 |
+bx {
+b111101111111 z
+b0 y
+bx x
+b0 w
+b0 v
+bx u
+bx t
+0s
+bx r
+b0 q
+bx p
+b0 o
+b0 n
+bx m
+b0xxxx l
+b0xxxx k
+b1100010101011 j
+bx i
+b0 h
+bx g
+b0 f
+b0 e
+b1100010101011 d
+b111101111111 c
+bx b
+b111101111111 a
+b0 `
+bx _
+bx ^
+b0 ]
+b0 \
+bx [
+b0 Z
+bx Y
+b1100010101011 X
+bx W
+b0 V
+b0 U
+b0 T
+b0 S
+bx R
+b0 Q
+b0 P
+bx O
+b0 N
+bx M
+bx L
+bx K
+bx J
+bx I
+bx H
+b0 G
+b0 F
+bx E
+b0 D
+bx C
+b101111111 B
+b1 A
+0@
+bx ?
+bx >
+b0 =
+0<
+b0 ;
+x:
+09
+bx 8
+07
+z6
+bx 5
+b0 4
+bx 3
+b111101111111 2
+b1 1
+b0 0
+bx /
+bx .
+bx -
+bx ,
+b1100010101011 +
+b0 *
+bx )
+bx (
+b0 '
+z&
+b0 %
+bx $
+bx #
+bx "
+b0 !
+$end
+#50
+b1011000100011010 I"
+b1011000100011010 ="
+b1110010000110010 H"
+b1110010000110010 <"
+b1 >"
+b1 C"
+b11 @"
+b11 E"
+b10 ?"
+b10 D"
+#70
+1B"
+1G"
+#100
+b1111111111111111 I"
+b1111111111111111 ="
+b1011000100011010 H"
+b1011000100011010 <"
+b10 >"
+b10 C"
+b100 @"
+b100 E"
+b11 ?"
+b11 D"
+#120
+0B"
+0G"
+#150
+b1111111111111111 H"
+b1111111111111111 <"
+b11 >"
+b11 C"
+b101 @"
+b101 E"
+b100 ?"
+b100 D"
+#200
+b1010110000010110 I"
+b1010110000010110 ="
+b100 >"
+b100 C"
+b110 @"
+b110 E"
+b101 ?"
+b101 D"
+#240
+1B"
+1G"
+#250
+b1111111111111111 I"
+b1111111111111111 ="
+b1010110000010110 H"
+b1010110000010110 <"
+b101 >"
+b101 C"
+b111 @"
+b111 E"
+b110 ?"
+b110 D"
+#300
+b1111111111111111 H"
+b1111111111111111 <"
+b110 >"
+b110 C"
+b1000 @"
+b1000 E"
+b111 ?"
+b111 D"
+#350
+b111 >"
+b111 C"
+b1001 @"
+b1001 E"
+b1000 ?"
+b1000 D"
+#400
+b1000 >"
+b1000 C"
+b1010 @"
+b1010 E"
+b1001 ?"
+b1001 D"
+#430
+0B"
+0G"
+#450
+b1001 >"
+b1001 C"
+b1011 @"
+b1011 E"
+b1010 ?"
+b1010 D"
+#500
+b1011100010000101 I"
+b1011100010000101 ="
+b1010 >"
+b1010 C"
+b1100 @"
+b1100 E"
+b1011 ?"
+b1011 D"
+#550
+b1111110001111111 I"
+b1111110001111111 ="
+b1011100010000101 H"
+b1011100010000101 <"
+b1011 >"
+b1011 C"
+b1101 @"
+b1101 E"
+b1100 ?"
+b1100 D"
+#600
+b1100100100100101 I"
+b1100100100100101 ="
+b1111110001111111 H"
+b1111110001111111 <"
+b1100 >"
+b1100 C"
+b1110 @"
+b1110 E"
+b1101 ?"
+b1101 D"
+#650
+b100000111101110 I"
+b100000111101110 ="
+b1100100100100101 H"
+b1100100100100101 <"
+b1101 >"
+b1101 C"
+b1111 @"
+b1111 E"
+b1110 ?"
+b1110 D"
+#700
+b101001001100 I"
+b101001001100 ="
+b100000111101110 H"
+b100000111101110 <"
+b1110 >"
+b1110 C"
+b0 @"
+b0 E"
+b1111 ?"
+b1111 D"
+#750
+b111101111111 I"
+b111101111111 ="
+b101001001100 H"
+b101001001100 <"
+b1111 >"
+b1111 C"
+b1 @"
+b1 E"
+b0 ?"
+b0 D"
+#800

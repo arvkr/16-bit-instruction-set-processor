@@ -1,0 +1,157 @@
+$date
+	Mon Apr 17 20:33:01 2017
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module globalvar $end
+$var reg 4 ! adr [3:0] $end
+$var reg 1 " empty $end
+$var reg 1 # full $end
+$upscope $end
+$scope module psw $end
+$var wire 1 $ clk $end
+$var wire 1 % rst $end
+$var wire 4 & swin [3:0] $end
+$var reg 4 ' swout [3:0] $end
+$upscope $end
+$scope module tb_datapath $end
+$var reg 1 ( clk $end
+$var reg 1 ) rst $end
+$scope module uut $end
+$var wire 16 * a [15:0] $end
+$var wire 2 + aluactrl [1:0] $end
+$var wire 2 , alubctrl [1:0] $end
+$var wire 3 - aluctrl [2:0] $end
+$var wire 16 . b [15:0] $end
+$var wire 1 / clk $end
+$var wire 8 0 dadd [7:0] $end
+$var wire 2 1 datmem1ctrl [1:0] $end
+$var wire 2 2 datmem2ctrl [1:0] $end
+$var wire 16 3 din [15:0] $end
+$var wire 16 4 dout [15:0] $end
+$var wire 16 5 in [15:0] $end
+$var wire 9 6 jadd [8:0] $end
+$var wire 9 7 pc_inmem [8:0] $end
+$var wire 2 8 pcctrl [1:0] $end
+$var wire 9 9 pcin [8:0] $end
+$var wire 9 : pcin1 [8:0] $end
+$var wire 16 ; ra [15:0] $end
+$var wire 2 < ra1ctrl [1:0] $end
+$var wire 4 = ra_ad [3:0] $end
+$var wire 16 > rb [15:0] $end
+$var wire 1 ? rst $end
+$var wire 1 @ rwb $end
+$var wire 16 A sout [15:0] $end
+$var wire 1 B stack_en $end
+$var wire 1 C stack_rwb $end
+$var wire 4 D w1 [3:0] $end
+$var wire 1 E wen $end
+$var wire 16 F wr_d [15:0] $end
+$var wire 2 G wrctrl [1:0] $end
+$var wire 16 H y [15:0] $end
+$var wire 1 I z $end
+$scope module pcmux $end
+$var wire 9 J d1 [8:0] $end
+$var wire 9 K d2 [8:0] $end
+$var wire 9 L d3 [8:0] $end
+$var wire 9 M d4 [8:0] $end
+$var wire 2 N s [1:0] $end
+$var reg 9 O dout [8:0] $end
+$upscope $end
+$scope module p $end
+$var wire 1 / clk $end
+$var wire 9 P iaddin [8:0] $end
+$var wire 1 ? rst $end
+$var reg 9 Q iaddout [8:0] $end
+$upscope $end
+$scope module i $end
+$var wire 9 R iadd [8:0] $end
+$var reg 16 S iout [15:0] $end
+$upscope $end
+$scope module ramux $end
+$var wire 4 T d1 [3:0] $end
+$var wire 4 U d2 [3:0] $end
+$var wire 4 V d3 [3:0] $end
+$var wire 4 W d4 [3:0] $end
+$var wire 2 X s [1:0] $end
+$var reg 4 Y dout [3:0] $end
+$upscope $end
+$scope module ra2mux $end
+$var wire 4 Z d1 [3:0] $end
+$var wire 4 [ d2 [3:0] $end
+$var wire 4 \ d3 [3:0] $end
+$var wire 4 ] d4 [3:0] $end
+$var wire 2 ^ s [1:0] $end
+$var reg 4 _ dout [3:0] $end
+$upscope $end
+$scope module wrmux $end
+$var wire 16 ` d1 [15:0] $end
+$var wire 16 a d2 [15:0] $end
+$var wire 16 b d3 [15:0] $end
+$var wire 16 c d4 [15:0] $end
+$var wire 2 d s [1:0] $end
+$var reg 16 e dout [15:0] $end
+$upscope $end
+$scope module regfile $end
+$var wire 4 f ra_adr [3:0] $end
+$var wire 4 g rb_adr [3:0] $end
+$var wire 4 h rc_adr [3:0] $end
+$var wire 16 i rc_data [15:0] $end
+$var wire 1 E wen $end
+$var reg 16 j ra_data [15:0] $end
+$var reg 16 k rb_data [15:0] $end
+$upscope $end
+$scope module aluamux $end
+$var wire 16 l d1 [15:0] $end
+$var wire 16 m d2 [15:0] $end
+$var wire 16 n d3 [15:0] $end
+$var wire 16 o d4 [15:0] $end
+$var wire 2 p s [1:0] $end
+$var reg 16 q dout [15:0] $end
+$upscope $end
+$scope module alubmux $end
+$var wire 16 r d1 [15:0] $end
+$var wire 16 s d2 [15:0] $end
+$var wire 16 t d3 [15:0] $end
+$var wire 16 u d4 [15:0] $end
+$var wire 2 v s [1:0] $end
+$var reg 16 w dout [15:0] $end
+$upscope $end
+$scope module main_alu $end
+$var wire 16 x a [15:0] $end
+$var wire 3 y aluc [2:0] $end
+$var wire 16 z b [15:0] $end
+$var reg 16 { y [15:0] $end
+$var reg 1 | z $end
+$upscope $end
+$scope module datmem1_mux $end
+$var wire 8 } d1 [7:0] $end
+$var wire 8 ~ d2 [7:0] $end
+$var wire 8 !" d3 [7:0] $end
+$var wire 8 "" d4 [7:0] $end
+$var wire 2 #" s [1:0] $end
+$var reg 8 $" dout [7:0] $end
+$upscope $end
+$scope module datmem2_mux $end
+$var wire 16 %" d1 [15:0] $end
+$var wire 16 &" d2 [15:0] $end
+$var wire 16 '" d3 [15:0] $end
+$var wire 16 (" d4 [15:0] $end
+$var wire 2 )" s [1:0] $end
+$var reg 16 *" dout [15:0] $end
+$upscope $end
+$scope module main_datmem $end
+$var wire 8 +" dadd [7:0] $end
+$var wire 16 ," din [15:0] $end
+$var wire 1 @ rwb $end
+$var reg 16 -" dout [15:0] $end
+$upscope $end
+$scope module stack1 $end
+$var wire 16 ." din [15:0] $end
+$var wire 1 B en $end
+$var wire 1 C rwb $end
+$var reg 16 /" dout

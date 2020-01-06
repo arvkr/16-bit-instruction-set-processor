@@ -1,0 +1,73 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x80e690 .scope module, "register_file" "register_file" 2 1;
+ .timescale 0 0;
+v0x8207c0_0 .net "ra_adr", 3 0, C4<zzzz>; 0 drivers
+v0x852300_0 .var "ra_data", 15 0;
+v0x8523a0_0 .net "rb_adr", 3 0, C4<zzzz>; 0 drivers
+v0x852440_0 .var "rb_data", 15 0;
+v0x8524f0_0 .net "rc_adr", 3 0, C4<zzzz>; 0 drivers
+v0x852590_0 .net "rc_data", 15 0, C4<zzzzzzzzzzzzzzzz>; 0 drivers
+v0x852670 .array "regmem", 15 0, 15 0;
+v0x852980_0 .net "wen", 0 0, C4<z>; 0 drivers
+v0x852670_0 .array/port v0x852670, 0;
+v0x852670_1 .array/port v0x852670, 1;
+E_0x820a20/0 .event edge, v0x852980_0, v0x8207c0_0, v0x852670_0, v0x852670_1;
+v0x852670_2 .array/port v0x852670, 2;
+v0x852670_3 .array/port v0x852670, 3;
+v0x852670_4 .array/port v0x852670, 4;
+v0x852670_5 .array/port v0x852670, 5;
+E_0x820a20/1 .event edge, v0x852670_2, v0x852670_3, v0x852670_4, v0x852670_5;
+v0x852670_6 .array/port v0x852670, 6;
+v0x852670_7 .array/port v0x852670, 7;
+v0x852670_8 .array/port v0x852670, 8;
+v0x852670_9 .array/port v0x852670, 9;
+E_0x820a20/2 .event edge, v0x852670_6, v0x852670_7, v0x852670_8, v0x852670_9;
+v0x852670_10 .array/port v0x852670, 10;
+v0x852670_11 .array/port v0x852670, 11;
+v0x852670_12 .array/port v0x852670, 12;
+v0x852670_13 .array/port v0x852670, 13;
+E_0x820a20/3 .event edge, v0x852670_10, v0x852670_11, v0x852670_12, v0x852670_13;
+v0x852670_14 .array/port v0x852670, 14;
+v0x852670_15 .array/port v0x852670, 15;
+E_0x820a20/4 .event edge, v0x852670_14, v0x852670_15, v0x8523a0_0, v0x852590_0;
+E_0x820a20/5 .event edge, v0x8524f0_0;
+E_0x820a20 .event/or E_0x820a20/0, E_0x820a20/1, E_0x820a20/2, E_0x820a20/3, E_0x820a20/4, E_0x820a20/5;
+    .scope S_0x80e690;
+T_0 ;
+    %wait E_0x820a20;
+    %load/v 8, v0x852980_0, 1;
+    %cmpi/u 8, 0, 1;
+    %jmp/0xz  T_0.0, 4;
+    %ix/getv 3, v0x8207c0_0;
+    %load/av 8, v0x852670, 16;
+    %ix/load 0, 16, 0;
+    %assign/v0 v0x852300_0, 0, 8;
+    %ix/getv 3, v0x8523a0_0;
+    %load/av 8, v0x852670, 16;
+    %ix/load 0, 16, 0;
+    %assign/v0 v0x852440_0, 0, 8;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/v 8, v0x852980_0, 1;
+    %jmp/0xz  T_0.2, 8;
+    %load/v 8, v0x852590_0, 16;
+    %ix/getv 3, v0x8524f0_0;
+    %jmp/1 t_0, 4;
+    %ix/load 0, 16, 0; word width
+    %ix/load 1, 0, 0; part off
+    %assign/av v0x852670, 0, 8;
+t_0 ;
+T_0.2 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0, $push;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "register_file.v";
